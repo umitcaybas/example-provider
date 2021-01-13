@@ -5,12 +5,17 @@
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
-    "test": "npx jest --testTimeout 30000",
+    "test": "./node_modules/.bin/mocha src/product/product.pact.test.js",
     "test:pact": "npx jest --testTimeout 30000 --testMatch \"**/*.pact.test.js\""
   },
   "dependencies": {
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "babel": "^6.23.0",
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mocha": "^8.2.1"
   },
   "devDependencies": {
     "@pact-foundation/pact": "^9.11.1",

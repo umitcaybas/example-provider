@@ -8,7 +8,7 @@ const port = 8080;
 const init = () => {
     app.use(cors());
     app.use(routes);
-    app.use(authMiddleware);
+    // app.use(authMiddleware);
     return app.listen(port, () => console.log(`Provider API listening on port ${port}...`));
 };
 
